@@ -35,7 +35,7 @@ export default function Page() {
 				{posts && posts.length > 0 ? (
 					posts.map((post) => (
 						<Card key={post.id} className="grow overflow-hidden">
-							<CardContent>
+							<CardContent className="p-0">
 								<img src={getImageURL(post.collectionId, post.id, post.pictures[0])} alt={post.name} className="h-60 w-full overflow-hidden object-cover" />
 							</CardContent>
 							<CardHeader>

@@ -54,16 +54,18 @@ export default function Filters() {
 				</PopoverContent>
 			</Popover>
 
-			<Select selected={size} onChange={(value) => setSize(value)} className="w-32 shrink-0">
-				<SelectTrigger>
+			<Select selected={size} onChange={(value) => setSize(value)}>
+				<SelectTrigger className="w-32 shrink-0">
 					<SelectValue placeholder="Sizes" />
 				</SelectTrigger>
 				<SelectContent>
-					{sizes.map((size) => (
-						<SelectItem key={size.value} value={size.value}>
-							{size.label}
-						</SelectItem>
-					))}
+					<SelectGroup>
+						{sizes.map((size) => (
+							<SelectItem key={size.value} value={size.value}>
+								{size.label}
+							</SelectItem>
+						))}
+					</SelectGroup>
 				</SelectContent>
 			</Select>
 		</div>
